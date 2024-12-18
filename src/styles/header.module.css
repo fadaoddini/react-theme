@@ -1,0 +1,157 @@
+.navbar {
+  background-color: var(--green);
+  width: 100%;
+  position: fixed; /* نوار ناوبری را ثابت نگه می‌دارد */
+  top: 0;
+  padding: 5px;
+  font-size: 0.7rem;
+  color: var(--white);
+  z-index: 16; /* پایین‌تر از header */
+}
+.row_navbar {
+  display: flex;
+  flex-direction: row;
+  padding: 0px 20px;
+  width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  direction: rtl;
+  z-index: 5;
+}
+.right_navbar {
+  display: flex;
+  flex-direction: row;
+}
+.icon_clock_navbar,
+.icon_left_navbar {
+  display: flex;
+  align-items: center;
+  margin: 0 5px;
+}
+.icon_clock_navbar img,
+.icon_left_navbar img {
+  margin-left: 5px; /* Adjusts space between icon and text */
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin-top: -15px;
+  height: 116px;
+  align-items: center;
+  padding: 0 20px;
+  direction: rtl; /* تنظیم راست‌به‌چپ */
+  background-image: url("/images/bg_header.svg");
+  z-index: 10; /* بالاتر از اسلایدر */
+  position: relative; /* اطمینان از کارکرد z-index */
+ 
+}
+.header_wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 15px;
+  align-items: center;
+}
+
+.navbar_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.header_right{
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+
+}
+.header_left{
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+
+
+
+}
+.logo {
+  width: 100px;
+  margin: 20px 20px 0 20px;
+}
+
+.left_menu {
+  display: flex;
+  margin-top: 25px;
+  gap: 15px; /* فاصله بین آیکن‌ها */
+  flex-grow: 1;
+  justify-content: flex-end; /* چیدمان به سمت چپ */
+  align-items: center;
+}
+
+.tooltip_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  background-color: blueviolet;
+  margin-left: 8px; /* فاصله آیکن از متن */
+}
+
+.nav_title {
+  position: relative;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 0px;
+  padding-left: 10px;
+  color: var(--black);
+}
+.nav_title:hover{
+  color: var(--green-light);
+}
+.nav_title:hover::before {
+  content: "";
+  position: absolute;
+  bottom: -7px; /* فاصله تصویر از متن */
+  left: 50%; /* قرارگیری وسط */
+  transform: translateX(-50%); /* تنظیم دقیق برای وسط‌چینی */
+  height: 5px; /* ارتفاع تصویر */
+  width: 100%;
+  background-image: url("/images/under_menu.svg"); /* مسیر تصویر */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+/* ایجاد بردر سفارشی با طول کمتر */
+.nav_title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 25%; /* تنظیم موقعیت عمودی برای بردر */
+  height: 50%; /* تنظیم ارتفاع دلخواه برای بردر */
+  width: 1px;
+  background-color: #ccc;
+}
+
+/* حذف بردر برای آخرین مورد */
+.left_menu .tooltip_container:last-child .nav_title::after {
+  display: none;
+}
+
+.nav_login_exit{
+  margin: 0 10px 0 0;
+  cursor: pointer;
+  color: var(--white);
+}
+.nav_login_exit:hover{
+  color: var(--yellow);
+}

@@ -1,0 +1,56 @@
+.container {
+    display: flex;
+    justify-content: space-between; /* فضای بین کارت‌ها را توزیع می‌کند */
+    max-width: 1200px;
+    margin: 3% 12%;
+}
+
+.card {
+    background-color: #fff;
+    width: 31%; 
+    
+    overflow: hidden; 
+    text-align: center;
+    margin: 1% 1%; 
+    border-radius: 50px;
+}
+
+.image {
+   
+    width: 100%;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0; 
+}
+.div_img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 87, 26, 0.4); /* رنگ سبز با شفافیت ۰.۴ */
+    border-radius: 50px; /* هم‌تراز با تصویر اصلی */
+    pointer-events: none; /* اطمینان از اینکه این لایه تأثیری روی تعاملات کاربر ندارد */
+}
+.div_img{
+    position: relative;
+    height: 220px;
+}
+.title:hover{
+    background-color:var(--yellow);
+}
+.title {
+    position: absolute;
+    cursor: pointer;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    color: var(--green);
+    height: 16px;
+    font-size: 0.9rem;
+    background-color: #fff;
+    border-radius: 20px 20px 0 0 ;
+    padding: 10px 0; /* فضای داخل عنوان */
+  
+}
